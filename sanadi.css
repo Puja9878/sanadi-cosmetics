@@ -6,12 +6,18 @@
 }
 
 .navbar {
+    height: 87px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
     background-color: #2f3640;
 }
 
 .nav-list {
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +25,7 @@
 
 .nav-list li {
     list-style: none;
-    padding: 17px 32px;
+    padding: 14px 54px;
     font-size: 1.3rem;
 }
 
@@ -42,6 +48,9 @@
 }
 
 .logo img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 200%;
     border: 3px solid white;
     border-radius: 15px;
@@ -67,18 +76,17 @@
     margin-left: 2.1rem;
 }
 
+.rightnav {
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* For hamburger  menu */
 
-.rightnav {
-    width: 30%;
-    text-align: right;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sidenav {
+.sidebar {
     height: 100%;
     width: 0;
     position: fixed;
@@ -91,40 +99,53 @@
     padding-top: 60px;
 }
 
-.sidenav a {
-    padding: 8px 18px 11px 38px;
+.sidebar a {
+    padding: 13px 13px 11px 50px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     transition: 0.3s;
 }
 
-.sidenav a:hover {
+.sidebar a:hover {
     color: #f1f1f1;
 }
 
-.sidenav .closebtn {
+.sidebar .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    left: 55px;
     font-size: 36px;
-    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #2f3640;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
 }
 
 #main {
     transition: margin-right .5s;
     padding: 16px;
-    align-items: flex-end;
 }
 
-@media screen and (max-height:450px) {
-    .sidenav {
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidebar {
         padding-top: 15px;
     }
-    .sidenav a {
+    .sidebar a {
         font-size: 18px;
     }
 }
@@ -133,8 +154,9 @@
 /* For Search bar */
 
 .search-box {
-    position: absolute;
-    top: 35px;
+    display: flex;
+    position: relative;
+    top: 13px;
     transform: translate(-50%, -50%);
     height: 40px;
     background: #2f3640;
@@ -166,6 +188,7 @@
 }
 
 .search-txt {
+    display: flex;
     border: none;
     background: none;
     outline: none;
